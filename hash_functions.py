@@ -30,3 +30,69 @@ def sha384hash(text):
 	hash = hashlib.sha384()
 	hash.update(text.encode("utf-8"))
 	return hash.hexdigest()
+
+def md5crack(hash, list):
+	"""Takes in an md5 hash and the path to a wordlist and attempts to crack the hash"""
+	cleartext = ''
+	with open(list, 'r') as wordlist:
+		for line in wordlist:
+			if md5hash(line.strip('\n')) == hash:
+				cleartext = line
+				break
+	if cleartext:
+		return 'The hash is: '+cleartext
+	else:
+		return 'Using the provided wordlist, no matches were found'
+
+def sha1crack(hash, list):
+        """Takes in an sha1 hash and the path to a wordlist and attempts to crack the hash"""
+        cleartext = ''
+        with open(list, 'r') as wordlist:
+                for line in wordlist:
+                        if sha1hash(line.strip('\n')) == hash:
+                                cleartext = line
+                                break
+        if cleartext:
+                return 'The hash is: '+cleartext
+        else:
+                return 'Using the provided wordlist, no matches were found'
+
+def sha224crack(hash, list):
+        """Takes in an sha224 hash and the path to a wordlist and attempts to crack the hash"""
+        cleartext = ''
+        with open(list, 'r') as wordlist:
+                for line in wordlist:
+                        if sha224hash(line.strip('\n')) == hash:
+                                cleartext = line
+                                break
+        if cleartext:
+                return 'The hash is: '+cleartext
+        else:
+                return 'Using the provided wordlist, no matches were found'
+
+def sha256crack(hash, list):
+        """Takes in an sha256 hash and the path to a wordlist and attempts to crack the hash"""
+        cleartext = ''
+        with open(list, 'r') as wordlist:
+                for line in wordlist:
+                        if sha256hash(line.strip('\n')) == hash:
+                                cleartext = line
+                                break
+        if cleartext:
+                return 'The hash is: '+cleartext
+        else:
+                return 'Using the provided wordlist, no matches were found'
+
+def sha384crack(hash, list):
+        """Takes in an sha384 hash and the path to a wordlist and attempts to crack the hash"""
+        cleartext = ''
+        with open(list, 'r') as wordlist:
+                for line in wordlist:
+                        if sha384hash(line.strip('\n')) == hash:
+                                cleartext = line
+                                break
+        if cleartext:
+                return 'The hash is: '+cleartext
+        else:
+                return 'Using the provided wordlist, no matches were found'
+
