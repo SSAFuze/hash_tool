@@ -32,7 +32,7 @@ while True:
 	elif choice == '2':
 		session_end = False
 		while session_end == False:
-			crack_type = str(input('Please enter which hash algorithm you wish to crack. If you are unsure about what this program supports, enter \'return\': ')) 
+			crack_type = str(input('Please enter which hash algorithm you wish to crack. If you are unsure about what this program supports, enter \'supported\'. To return to the main menu, enter \'return\': ')) 
 			if crack_type == 'supported':
 				print('We support: ')
 				for i in supported_hashes:
