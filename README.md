@@ -9,6 +9,6 @@ Simply download the source from this repository and whilst in this directory, ru
 python3 hash.py
 ```
 
-and then the options should appear.
+in the directory containing the files and then the options should appear.
 
 (you will need the python library 'hashlib' installed for this tool to work)
